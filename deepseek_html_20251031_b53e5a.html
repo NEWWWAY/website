@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewwWay - In Arrivo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            padding: 60px 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+        }
+        
+        .logo {
+            font-size: 3.5em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 2.2em;
+        }
+        
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+        
+        .form-container {
+            margin: 40px 0;
+        }
+        
+        input[type="email"] {
+            padding: 15px 20px;
+            width: 100%;
+            max-width: 400px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 1em;
+            margin-bottom: 15px;
+            transition: border-color 0.3s;
+        }
+        
+        input[type="email"]:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        button {
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+        }
+        
+        .message {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            display: none;
+        }
+        
+        .success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .footer {
+            margin-top: 40px;
+            color: #888;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">NEWWWAY</div>
+        <h1>Sta Arrivando Qualcosa di Straordinario</h1>
+        <p class="subtitle">Stiamo lavorando alla prossima evoluzione. Lascia la tua email per essere tra i primi a scoprire NewwWay.</p>
+        
+        <div class="form-container">
+            <form id="emailForm">
+                <input type="email" id="email" placeholder="la.tua.email@esempio.com" required>
+                <button type="submit">Avvisami al Lancio</button>
+            </form>
+            <div id="message" class="message"></div>
+        </div>
+        
+        <div class="footer">
+            © 2024 NewwWay. Tutti i diritti riservati.
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('emailForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message');
+            
+            // Qui salveremo le email (prossimo passo)
+            message.style.display = 'block';
+            message.className = 'message success';
+            message.innerHTML = '🎉 Grazie! Ti avviseremo quando saremo pronti.';
+            
+            // Reset del form
+            document.getElementById('emailForm').reset();
+            
+            // Salva l'email temporaneamente (soluzione semplice)
+            console.log('Email raccolta:', email);
+        });
+    </script>
+</body>
+</html>

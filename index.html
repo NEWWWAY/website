@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NewwWay - In Arrivo</title>
+    <title>NewwWay - La Nuova Via dell'Apprendimento</title>
     <style>
         * {
             margin: 0;
@@ -12,79 +12,133 @@
         }
         
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 20px;
+            color: #333;
         }
         
         .container {
-            background: white;
+            background: rgba(255, 255, 255, 0.95);
             padding: 60px 40px;
             border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
             text-align: center;
-            max-width: 600px;
+            max-width: 800px;
             width: 100%;
+            backdrop-filter: blur(10px);
         }
         
         .logo {
-            font-size: 3.5em;
+            font-size: 4em;
             font-weight: bold;
             color: #333;
-            margin-bottom: 20px;
-            letter-spacing: 2px;
+            margin-bottom: 10px;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .tagline {
+            color: #667eea;
+            font-size: 1.4em;
+            margin-bottom: 40px;
+            font-weight: 300;
         }
         
         h1 {
             color: #333;
-            margin-bottom: 15px;
-            font-size: 2.2em;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            line-height: 1.3;
         }
         
-        .subtitle {
+        .mission {
             color: #666;
-            font-size: 1.2em;
-            margin-bottom: 40px;
+            font-size: 1.3em;
+            margin-bottom: 30px;
             line-height: 1.6;
         }
         
+        .highlight {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
+        
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        
+        .feature {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            flex: 1;
+            min-width: 200px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .feature-icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+        
+        .feature-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
         .form-container {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             margin: 40px 0;
         }
         
         input[type="email"] {
-            padding: 15px 20px;
+            padding: 18px 25px;
             width: 100%;
             max-width: 400px;
-            border: 2px solid #ddd;
-            border-radius: 10px;
-            font-size: 1em;
-            margin-bottom: 15px;
-            transition: border-color 0.3s;
+            border: 2px solid #e1e5e9;
+            border-radius: 12px;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            transition: all 0.3s;
         }
         
         input[type="email"]:focus {
             outline: none;
             border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
         }
         
         button {
-            padding: 15px 40px;
+            padding: 18px 50px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             border: none;
-            border-radius: 10px;
-            font-size: 1.1em;
+            border-radius: 12px;
+            font-size: 1.2em;
+            font-weight: bold;
             cursor: pointer;
-            transition: transform 0.2s;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
         
         button:hover {
-            transform: translateY(-2px);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
         }
         
         .message {
@@ -92,6 +146,7 @@
             padding: 15px;
             border-radius: 10px;
             display: none;
+            font-weight: bold;
         }
         
         .success {
@@ -105,24 +160,69 @@
             color: #888;
             font-size: 0.9em;
         }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 20px;
+            }
+            
+            .logo {
+                font-size: 3em;
+            }
+            
+            .features {
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="logo">NEWWWAY</div>
-        <h1>Sta Arrivando Qualcosa di Straordinario</h1>
-        <p class="subtitle">Stiamo lavorando alla prossima evoluzione. Lascia la tua email per essere tra i primi a scoprire NewwWay.</p>
+        <div class="tagline">La Nuova Via dell'Apprendimento</div>
         
+        <h1>Stiamo Rivoluzionando <span class="highlight">l'Educazione Digitale</span></h1>
+        
+        <p class="mission">
+            NewwWay è una piattaforma innovativa che rende l'apprendimento accessibile a tutti, 
+            con corsi gratuiti di alta qualità e un approccio completamente nuovo alla formazione online.
+        </p>
+
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">🎯</div>
+                <div class="feature-title">Corsi Gratuiti</div>
+                <div>Formazione di qualità accessibile a tutti</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🚀</div>
+                <div class="feature-title">Apprendimento Pratico</div>
+                <div>Impara facendo, non solo ascoltando</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🌍</div>
+                <div class="feature-title">Comunità Globale</div>
+                <div>Connettiti con apprendisti worldwide</div>
+            </div>
+        </div>
+
         <div class="form-container">
+            <h2>🚀 <span class="highlight">Primo Corso Gratuito</span> in Arrivo!</h2>
+            <p style="margin: 20px 0; color: #666; font-size: 1.1em;">
+                Sii tra i primi a scoprire il nostro corso di lancio. Lascia la tua email e ti avviseremo 
+                non appena saremo pronti a partire!
+            </p>
+            
             <form id="emailForm">
                 <input type="email" id="email" placeholder="la.tua.email@esempio.com" required>
-                <button type="submit">Avvisami al Lancio</button>
+                <button type="submit">Avvisami al Lancio!</button>
             </form>
+            
             <div id="message" class="message"></div>
         </div>
         
         <div class="footer">
-            © 2024 NewwWay. Tutti i diritti riservati.
+            © 2024 NewwWay. Trasformiamo l'apprendimento, insieme.
         </div>
     </div>
 
@@ -135,13 +235,13 @@
             // Qui salveremo le email (prossimo passo)
             message.style.display = 'block';
             message.className = 'message success';
-            message.innerHTML = '🎉 Grazie! Ti avviseremo quando saremo pronti.';
+            message.innerHTML = '🎉 Grazie! Ti avviseremo per primo quando il corso gratuito sarà pronto!';
             
             // Reset del form
             document.getElementById('emailForm').reset();
             
-            // Salva l'email temporaneamente (soluzione semplice)
-            console.log('Email raccolta:', email);
+            // Salva l'email temporaneamente
+            console.log('Nuovo iscritto:', email);
         });
     </script>
 </body>

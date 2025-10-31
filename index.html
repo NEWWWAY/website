@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NewwWay - La Nuova Via dell'Apprendimento</title>
+    <title>NewwWay - Evoluzione Personale per un Cambiamento Globale</title>
     <style>
         * {
             margin: 0;
@@ -13,58 +13,84 @@
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #000000;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 20px;
-            color: #333;
+            color: white;
         }
         
         .container {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(0, 0, 0, 0.8);
             padding: 60px 40px;
             border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
             text-align: center;
             max-width: 800px;
             width: 100%;
-            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 215, 0, 0.3);
         }
         
-        .logo {
-            font-size: 4em;
+        .logo-container {
+            margin-bottom: 30px;
+        }
+        
+        .logo-placeholder {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, transparent 40%, rgba(255,215,0,0.1) 100%);
+            border: 2px solid rgba(255, 215, 0, 0.5);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            color: gold;
+        }
+        
+        .logo-text {
+            font-size: 3.5em;
             font-weight: bold;
-            color: #333;
+            color: gold;
             margin-bottom: 10px;
             letter-spacing: 3px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            text-shadow: 0 0 20px rgba(255,215,0,0.5);
         }
         
         .tagline {
-            color: #667eea;
-            font-size: 1.4em;
+            color: #ffffff;
+            font-size: 1.3em;
             margin-bottom: 40px;
             font-weight: 300;
+            opacity: 0.9;
         }
         
         h1 {
-            color: #333;
-            margin-bottom: 20px;
-            font-size: 2.5em;
-            line-height: 1.3;
+            color: gold;
+            margin-bottom: 30px;
+            font-size: 2.3em;
+            line-height: 1.4;
+            text-shadow: 0 0 10px rgba(255,215,0,0.3);
         }
         
         .mission {
-            color: #666;
+            color: #ffffff;
             font-size: 1.3em;
-            margin-bottom: 30px;
-            line-height: 1.6;
+            margin-bottom: 40px;
+            line-height: 1.7;
+            opacity: 0.9;
         }
         
         .highlight {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: gold;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(255,215,0,0.3);
+        }
+        
+        .community-highlight {
+            background: linear-gradient(135deg, gold 0%, #ffd700 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-weight: bold;
@@ -73,61 +99,77 @@
         .features {
             display: flex;
             justify-content: center;
-            gap: 30px;
-            margin: 40px 0;
+            gap: 25px;
+            margin: 50px 0;
             flex-wrap: wrap;
         }
         
         .feature {
-            background: white;
-            padding: 25px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 25px 20px;
             border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
             flex: 1;
             min-width: 200px;
-            border-left: 4px solid #667eea;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            backdrop-filter: blur(10px);
         }
         
         .feature-icon {
             font-size: 2.5em;
             margin-bottom: 15px;
+            color: gold;
         }
         
         .feature-title {
             font-weight: bold;
-            margin-bottom: 10px;
-            color: #333;
+            margin-bottom: 12px;
+            color: gold;
+            font-size: 1.1em;
+        }
+        
+        .feature-description {
+            color: #ffffff;
+            opacity: 0.8;
+            line-height: 1.5;
         }
         
         .form-container {
-            background: white;
+            background: rgba(255, 255, 255, 0.05);
             padding: 40px;
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             margin: 40px 0;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            backdrop-filter: blur(10px);
         }
         
         input[type="email"] {
             padding: 18px 25px;
             width: 100%;
             max-width: 400px;
-            border: 2px solid #e1e5e9;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 215, 0, 0.3);
             border-radius: 12px;
             font-size: 1.1em;
             margin-bottom: 20px;
+            color: white;
             transition: all 0.3s;
+        }
+        
+        input[type="email"]::placeholder {
+            color: rgba(255, 255, 255, 0.6);
         }
         
         input[type="email"]:focus {
             outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+            border-color: gold;
+            box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.2);
+            background: rgba(255, 255, 255, 0.15);
         }
         
         button {
             padding: 18px 50px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: linear-gradient(135deg, gold 0%, #ffd700 100%);
+            color: black;
             border: none;
             border-radius: 12px;
             font-size: 1.2em;
@@ -138,7 +180,7 @@
         
         button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4);
         }
         
         .message {
@@ -150,14 +192,14 @@
         }
         
         .success {
-            background: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
+            background: rgba(255, 215, 0, 0.1);
+            color: gold;
+            border: 1px solid rgba(255, 215, 0, 0.3);
         }
         
         .footer {
             margin-top: 40px;
-            color: #888;
+            color: rgba(255, 255, 255, 0.6);
             font-size: 0.9em;
         }
         
@@ -166,8 +208,12 @@
                 padding: 40px 20px;
             }
             
-            .logo {
-                font-size: 3em;
+            .logo-text {
+                font-size: 2.8em;
+            }
+            
+            h1 {
+                font-size: 1.8em;
             }
             
             .features {
@@ -178,51 +224,59 @@
 </head>
 <body>
     <div class="container">
-        <div class="logo">NEWWWAY</div>
-        <div class="tagline">La Nuova Via dell'Apprendimento</div>
+        <div class="logo-container">
+            <div class="logo-placeholder">
+                <!-- SOSTITUISCI QUESTO CON IL TUO LOGO -->
+                🌟
+            </div>
+            <div class="logo-text">NEWWWAY</div>
+        </div>
         
-        <h1>Stiamo Rivoluzionando <span class="highlight">l'Educazione Digitale</span></h1>
+        <div class="tagline">Evoluzione Personale per un Cambiamento Globale</div>
+        
+        <h1>Trasforma Te Stesso,<br>Ispira il <span class="highlight">Mondo</span></h1>
         
         <p class="mission">
-            NewwWay è una piattaforma innovativa che rende l'apprendimento accessibile a tutti, 
-            con corsi gratuiti di alta qualità e un approccio completamente nuovo alla formazione online.
+            NewwWay non è solo educazione. È un movimento che parte dall'<span class="highlight">evoluzione personale</span> 
+            e si propaga attraverso una <span class="community-highlight">community consapevole</span>, creando un impatto 
+            positivo che tocca ogni angolo del pianeta.
         </p>
 
         <div class="features">
             <div class="feature">
-                <div class="feature-icon">🎯</div>
-                <div class="feature-title">Corsi Gratuiti</div>
-                <div>Formazione di qualità accessibile a tutti</div>
+                <div class="feature-icon">🌱</div>
+                <div class="feature-title">Evoluzione Personale</div>
+                <div class="feature-description">Sviluppa il tuo potenziale per diventare il cambiamento che vuoi vedere nel mondo</div>
             </div>
             <div class="feature">
-                <div class="feature-icon">🚀</div>
-                <div class="feature-title">Apprendimento Pratico</div>
-                <div>Impara facendo, non solo ascoltando</div>
+                <div class="feature-icon">🤝</div>
+                <div class="feature-title">Community Globale</div>
+                <div class="feature-description">Unisciti a una rete di persone che co-creano un futuro migliore</div>
             </div>
             <div class="feature">
                 <div class="feature-icon">🌍</div>
-                <div class="feature-title">Comunità Globale</div>
-                <div>Connettiti con apprendisti worldwide</div>
+                <div class="feature-title">Impatto Collettivo</div>
+                <div class="feature-description">Ogni trasformazione personale contribuisce al cambiamento globale</div>
             </div>
         </div>
 
         <div class="form-container">
-            <h2>🚀 <span class="highlight">Primo Corso Gratuito</span> in Arrivo!</h2>
-            <p style="margin: 20px 0; color: #666; font-size: 1.1em;">
-                Sii tra i primi a scoprire il nostro corso di lancio. Lascia la tua email e ti avviseremo 
-                non appena saremo pronti a partire!
+            <h2>🚀 <span class="highlight">Primo Percorso Gratuito</span> in Arrivo!</h2>
+            <p style="margin: 20px 0; color: rgba(255,255,255,0.8); font-size: 1.1em; line-height: 1.6;">
+                Unisciti alla community dei pionieri. Lascia la tua email e sii tra i primi a sperimentare 
+                il nostro percorso di trasformazione personale.
             </p>
             
             <form id="emailForm">
                 <input type="email" id="email" placeholder="la.tua.email@esempio.com" required>
-                <button type="submit">Avvisami al Lancio!</button>
+                <button type="submit">Unisciti alla Rivoluzione</button>
             </form>
             
             <div id="message" class="message"></div>
         </div>
         
         <div class="footer">
-            © 2024 NewwWay. Trasformiamo l'apprendimento, insieme.
+            © 2024 NewwWay. Trasformazione Personale × Impatto Globale
         </div>
     </div>
 
@@ -232,16 +286,12 @@
             const email = document.getElementById('email').value;
             const message = document.getElementById('message');
             
-            // Qui salveremo le email (prossimo passo)
             message.style.display = 'block';
             message.className = 'message success';
-            message.innerHTML = '🎉 Grazie! Ti avviseremo per primo quando il corso gratuito sarà pronto!';
+            message.innerHTML = '🎉 Benvenuto nella rivoluzione! Ti avviseremo quando il percorso gratuito sarà pronto.';
             
-            // Reset del form
             document.getElementById('emailForm').reset();
-            
-            // Salva l'email temporaneamente
-            console.log('Nuovo iscritto:', email);
+            console.log('Nuovo membro community:', email);
         });
     </script>
 </body>
